@@ -1,0 +1,22 @@
+{
+  "name": "spiderpig-2.0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/blessed": "^0.1.4",
+    "@types/cheerio": "^0.17.31",
+    "@types/lodash": "^4.14.39",
+    "@types/moment": "^2.13.0",
+    "@types/request": "0.0.33",
+    "@types/request-promise": "^4.1.33",
+    "blessed": "^0.1.81",
+    "cheerio": "^0.22.0",
+    "lodash": "^4.17.2",
+    "moment": "^2.16.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1",
+    "single-line-log": "^1.1.2",
+    "url-toolkit": "^1.0.7"
+  }
+}
