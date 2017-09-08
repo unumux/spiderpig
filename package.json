@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "mocha --harmony-async-await"
+    "test": "mocha"
   },
   "dependencies": {
     "@types/blessed": "^0.1.4",
