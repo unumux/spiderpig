@@ -23,8 +23,8 @@ class SpiderPigCrawler extends EventEmitter {
             throw "URL is required";
         }
 
-        this.queue = [this.opts.url];
-        this.allDiscoveredUrls = [this.opts.url];
+        this.queue = Array.isArray(this.opts.url) ? this.opts.url : [this.opts.url];
+        this.allDiscoveredUrls = this.queue;
 
         this.passLinks = [];
         this.failLinks = [];

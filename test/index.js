@@ -85,6 +85,16 @@ describe("SpiderPigCrawler", function() {
             ]
         }, passLinksWithoutTest5, failLinksWithoutTest6);
     });
+
+    describe("support multiple initial urls", function() {
+        const passLinksWithAdditionalUrls = passLinks.concat(['http://127.0.0.1:8080/test1a.html', 'http://127.0.0.1:8080/test2a.html']);        
+
+        standardTests({
+            concurrent: 1,
+            delay: 10,
+            url: ["http://127.0.0.1:8080", "http://127.0.0.1:8080/test1a.html"]
+        }, passLinksWithAdditionalUrls, failLinks);
+    });
 });
 
 
