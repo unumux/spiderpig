@@ -23,8 +23,9 @@ class SpiderPigCrawler extends EventEmitter {
             throw "URL is required";
         }
 
-        this.queue = Array.isArray(this.opts.url) ? this.opts.url : [this.opts.url];
-        this.allDiscoveredUrls = this.queue;
+        this.opts.url = Array.isArray(this.opts.url) ? [...this.opts.url] : [this.opts.url];
+        this.queue = [...this.opts.url];
+        this.allDiscoveredUrls = [...this.opts.url];
 
         this.passLinks = [];
         this.failLinks = [];
@@ -84,8 +85,10 @@ class SpiderPigCrawler extends EventEmitter {
                         return false
                     }
                 }
-                
-                return link && link.indexOf(this.opts.url) === 0;
+
+                return link && this.opts.url.reduce((prev, includeUrl) => {
+                    return prev || link.indexOf(includeUrl) === 0;
+                }, false);
             });
 
             newLinks = _(newLinks)
