@@ -10,7 +10,7 @@ SpiderPig is a node library used to crawl websites to provide a list or URLs. It
 1. Import or require the library
     - `import Crawler from "@unumux/spiderpig";`
     - or `const Crawler = require("@unumux/spiderpig");`
-2. Create a crawler instance, and pass in [crawler options](#crawler-Options)
+2. Create a crawler instance, and pass in [crawler options](#crawler-options)
     ```
     const crawler = new Crawler({
         url: "http://localhost:3000",
@@ -18,7 +18,7 @@ SpiderPig is a node library used to crawl websites to provide a list or URLs. It
         delay: 300
     });
     ```
-3. Listen for [crawler events](#crawler-Events)
+3. Listen for [crawler events](#crawler-events)
     ```
     crawler.on("passing_link_found", (item) => {
         console.log(item);
