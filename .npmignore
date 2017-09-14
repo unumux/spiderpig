@@ -1,0 +1,4 @@
+*.txt
+test.js
+test/
+yarn-error.log

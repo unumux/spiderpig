@@ -2,3 +2,4 @@ node_modules
 fail.txt
 pass.txt
 test.js
+yarn-error.log

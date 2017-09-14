@@ -3,7 +3,6 @@ const {EventEmitter} = require("events");
 
 const request = require("request-promise");
 const cheerio = require("cheerio");
-const URLToolkit = require('url-toolkit');
 const _ = require("lodash");
 
 const defaultOpts = {
