@@ -60,7 +60,7 @@ class SpiderPigCrawler extends EventEmitter {
             try {
                 const response = await this.request.get(queueItem);
                 this.passLinks.push(queueItem);
-                this.emit("passing_link_found", queueItem);
+                this.emit("passing_link_found", queueItem, { response });
                 this.discoverLinks(response, queueItem);            
             } catch(err) {
                 if(err.statusCode === 404) {
