@@ -12,7 +12,7 @@
     "@types/request": "0.0.33",
     "@types/request-promise": "^4.1.33",
     "cheerio": "^0.22.0",
-    "lodash": "^4.17.2",
+    "lodash": "^4.17.13",
     "request": "^2.79.0",
     "request-promise": "^4.1.1"
   },
